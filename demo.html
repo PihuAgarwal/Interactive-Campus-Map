@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penn State Campus Map - Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .demo-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .demo-header h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .demo-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .feature-card h3 {
+            color: #667eea;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .building-list {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .building-list h3 {
+            color: #28a745;
+            margin-top: 0;
+        }
+        .building-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #28a745;
+        }
+        .building-item h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+        .building-item p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .accessibility-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        .tag.wheelchair { background: #e8f5e8; color: #28a745; }
+        .tag.food { background: #fff3e0; color: #f57c00; }
+        .setup-steps {
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #f57c00;
+        }
+        .setup-steps h3 {
+            color: #f57c00;
+            margin-top: 0;
+        }
+        .setup-steps ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .setup-steps li {
+            margin: 8px 0;
+        }
+        .demo-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+            margin: 10px 5px;
+        }
+        .demo-button:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-header">
+            <h1>🏛️ Penn State University Park</h1>
+            <p>Interactive Campus Map with Google Maps Integration</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🗺️ Interactive Map</h3>
+                <p>Real Google Maps integration showing actual Penn State campus with clickable building markers</p>
+            </div>
+            <div class="feature-card">
+                <h3>♿ Accessibility Info</h3>
+                <p>Detailed accessibility information including wheelchair access, elevators, and restroom availability</p>
+            </div>
+            <div class="feature-card">
+                <h3>🍽️ Dining Options</h3>
+                <p>Food options with dietary restrictions (vegetarian, vegan, gluten-free, halal, kosher)</p>
+            </div>
+            <div class="feature-card">
+                <h3>📱 Mobile Ready</h3>
+                <p>Fully responsive design optimized for mobile devices and QR code scanning</p>
+            </div>
+        </div>
+
+        <div class="building-list">
+            <h3>🏢 Featured Buildings</h3>
+            
+            <div class="building-item">
+                <h4>Pattee Library</h4>
+                <p><strong>Hours:</strong> Mon-Fri: 7:00 AM - 11:00 PM, Sat-Sun: 9:00 AM - 9:00 PM</p>
+                <p><strong>Food:</strong> Starbucks, Café, Vending Machines</p>
+                <div class="accessibility-tags">
+                    <span class="tag wheelchair">♿ Wheelchair Accessible</span>
+                    <span class="tag">🚻 Restrooms</span>
+                    <span class="tag">🛗 Elevator</span>
+                    <span class="tag food">🍽️ Vegetarian/Vegan Options</span>
+                </div>
+            </div>
+
+            <div class="building-item">
+                <h4>HUB-Robeson Center</h4>
+                <p><strong>Hours:</strong> Mon-Fri: 6:00 AM - 12:00 AM, Sat-Sun: 8:00 AM - 12:00 AM</p>
+                <p><strong>Food:</strong> Burger King, Subway, Panda Express, Sushi, Salad Bar</p>
+                <div class="accessibility-tags">
+                    <span class="tag wheelchair">♿ Wheelchair Accessible</span>
+                    <span class="tag">🚻 Restrooms</span>
+                    <span class="tag">🛗 Elevator</span>
+                    <span class="tag food">🍽️ Halal Options Available</span>
+                </div>
+            </div>
+
+            <div class="building-item">
+                <h4>Pollock Dining Commons</h4>
+                <p><strong>Hours:</strong> Breakfast: 7:00 AM - 10:00 AM, Lunch: 11:00 AM - 2:00 PM, Dinner: 5:00 PM - 8:00 PM</p>
+                <p><strong>Food:</strong> All-You-Can-Eat Buffet with full dietary accommodations</p>
+                <div class="accessibility-tags">
+                    <span class="tag wheelchair">♿ Wheelchair Accessible</span>
+                    <span class="tag">🚻 Restrooms</span>
+                    <span class="tag">🛗 Elevator</span>
+                    <span class="tag food">🍽️ Kosher & Halal Available</span>
+                </div>
+            </div>
+
+            <div class="building-item">
+                <h4>Rec Hall</h4>
+                <p><strong>Hours:</strong> Mon-Fri: 5:30 AM - 11:00 PM, Sat-Sun: 7:00 AM - 10:00 PM</p>
+                <p><strong>Food:</strong> Smoothie Bar, Protein Shakes, Energy Bars</p>
+                <div class="accessibility-tags">
+                    <span class="tag wheelchair">♿ Wheelchair Accessible</span>
+                    <span class="tag">🚻 Restrooms</span>
+                    <span class="tag">🛗 Elevator</span>
+                    <span class="tag food">🍽️ Fitness Nutrition</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="setup-steps">
+            <h3>🚀 Quick Setup</h3>
+            <ol>
+                <li>Get a free Google Maps API key from Google Cloud Console</li>
+                <li>Replace "YOUR_API_KEY" in index.html with your actual API key</li>
+                <li>Open index.html in your browser</li>
+                <li>Hover over buildings for quick info, click for detailed view</li>
+            </ol>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" class="demo-button">🗺️ View Interactive Map</a>
+            <a href="SETUP-GUIDE.md" class="demo-button">📖 Setup Guide</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Map Background Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        .map-generator {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .campus-map {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+            border: 3px solid #28a745;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .building {
+            position: absolute;
+            background: #6c757d;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .building::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #6c757d;
+        }
+        .building-1 { top: 20%; left: 20%; width: 80px; height: 60px; }
+        .building-2 { top: 30%; left: 60%; width: 100px; height: 80px; }
+        .building-3 { top: 60%; left: 10%; width: 90px; height: 70px; }
+        .building-4 { top: 70%; left: 70%; width: 70px; height: 50px; }
+        .path {
+            position: absolute;
+            background: #ffc107;
+            border-radius: 3px;
+        }
+        .path-1 { top: 40%; left: 0; width: 100%; height: 8px; }
+        .path-2 { top: 0; left: 50%; width: 8px; height: 100%; }
+        .grass {
+            position: absolute;
+            background: #28a745;
+            border-radius: 50%;
+        }
+        .grass-1 { top: 10%; left: 40%; width: 60px; height: 60px; }
+        .grass-2 { top: 50%; left: 30%; width: 40px; height: 40px; }
+        .grass-3 { top: 80%; left: 50%; width: 50px; height: 50px; }
+        .instructions {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="map-generator">
+        <h1>Campus Map Background Generator</h1>
+        <p>This is a placeholder campus map. Replace this with your actual campus map image.</p>
+        
+        <div class="campus-map">
+            <div class="building building-1"></div>
+            <div class="building building-2"></div>
+            <div class="building building-3"></div>
+            <div class="building building-4"></div>
+            
+            <div class="path path-1"></div>
+            <div class="path path-2"></div>
+            
+            <div class="grass grass-1"></div>
+            <div class="grass grass-2"></div>
+            <div class="grass grass-3"></div>
+        </div>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Take a screenshot of this map or create your own campus map</li>
+                <li>Save it as <code>campus-map-bg.jpg</code> in the <code>images/</code> folder</li>
+                <li>Replace the placeholder images in the <code>images/</code> folder with actual photos of your campus locations</li>
+                <li>Update the location data in <code>script.js</code> with real information</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

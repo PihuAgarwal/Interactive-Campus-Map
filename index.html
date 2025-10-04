@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Campus Map - Find your way around campus">
+    <meta name="keywords" content="campus map, university, interactive map, navigation">
+    <meta name="author" content="Penn State Campus Map">
+    
+    <!-- Open Graph meta tags for QR code compatibility -->
+    <meta property="og:title" content="Penn State University Park Interactive Campus Map">
+    <meta property="og:description" content="Interactive campus map with building details, accessibility info, and dining options">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/penn-state-logo.jpg">
+    
+    <title>Penn State University Park - Interactive Campus Map</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh0bz8OpH7EkrMJq_d8xXDxo8EHKr1pTM&callback=initMap&libraries=places"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Penn State University Park</h1>
+            <p>Interactive Campus Map - Hover over buildings for details</p>
+            <div class="map-controls">
+                <button id="toggleSatellite" class="control-btn">Satellite View</button>
+                <button id="resetView" class="control-btn">Reset View</button>
+            </div>
+        </header>
+
+        <!-- Main Map Container -->
+        <main class="map-container">
+            <div id="map" class="google-map"></div>
+            
+            <!-- Building Info Panel -->
+            <div class="building-info-panel" id="buildingInfoPanel">
+                <div class="panel-header">
+                    <h3 id="buildingName">Select a building</h3>
+                    <button id="closePanel" class="close-btn">&times;</button>
+                </div>
+                <div class="panel-content" id="buildingDetails">
+                    <p>Hover over any building on the map to see details</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modal for location details -->
+        <div class="modal" id="locationModal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <div class="modal-body">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-image">
+                        <img id="modalImage" src="" alt="">
+                    </div>
+                    <div class="modal-text">
+                        <p id="modalDescription"></p>
+                        <div class="location-details">
+                            <p><strong>Hours:</strong> <span id="modalHours"></span></p>
+                            <p><strong>Contact:</strong> <span id="modalContact"></span></p>
+                            <p><strong>Services:</strong> <span id="modalServices"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
