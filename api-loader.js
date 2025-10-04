@@ -4,7 +4,7 @@
     
     // Function to load Google Maps API with the key from config
     function loadGoogleMapsAPI() {
-        if (typeof CONFIG === 'undefined' || !CONFIG.GOOGLE_MAPS_API_KEY || CONFIG.GOOGLE_MAPS_API_KEY === 'YOUR_API_KEY_HERE') {
+        if (typeof CONFIG === 'undefined' || !CONFIG.GOOGLE_MAPS_API_KEY || CONFIG.GOOGLE_MAPS_API_KEY === 'AIzaSyCh0bz8OpH7EkrMJq_d8xXDxo8EHKr1pTM') {
             console.error('Google Maps API key not configured. Please update config.js with your API key.');
             document.body.innerHTML = `
                 <div style="padding: 20px; text-align: center; font-family: Arial, sans-serif;">
