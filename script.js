@@ -192,12 +192,13 @@ let currentBuilding = null;
 
 // Initialize Google Map
 function initMap() {
-    // Penn State University Park coordinates (centered on campus)
-    const pennState = { lat: 40.7982, lng: -77.8599 };
+    // Use configuration values or defaults
+    const mapCenter = (typeof CONFIG !== 'undefined' && CONFIG.MAP_CENTER) ? CONFIG.MAP_CENTER : { lat: 40.7982, lng: -77.8599 };
+    const mapZoom = (typeof CONFIG !== 'undefined' && CONFIG.MAP_ZOOM) ? CONFIG.MAP_ZOOM : 16;
     
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: pennState,
+        zoom: mapZoom,
+        center: mapCenter,
         mapTypeId: 'roadmap',
         styles: [
             {
@@ -231,7 +232,7 @@ function addBuildingMarkers() {
             icon: {
                 path: google.maps.SymbolPath.CIRCLE,
                 scale: 8,
-                fillColor: '#667eea',
+                fillColor: (typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea',
                 fillOpacity: 1,
                 strokeColor: '#ffffff',
                 strokeWeight: 2
@@ -503,11 +504,14 @@ function hideBuildingTooltip() {
 
 // Highlight selected marker
 function highlightMarker(selectedMarker) {
+    const normalColor = (typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea';
+    const selectedColor = (typeof CONFIG !== 'undefined' && CONFIG.MARKER_SELECTED_COLOR) ? CONFIG.MARKER_SELECTED_COLOR : '#ff6b6b';
+    
     markers.forEach(marker => {
         marker.setIcon({
             path: google.maps.SymbolPath.CIRCLE,
             scale: 8,
-            fillColor: marker === selectedMarker ? '#ff6b6b' : '#667eea',
+            fillColor: marker === selectedMarker ? selectedColor : normalColor,
             fillOpacity: 1,
             strokeColor: '#ffffff',
             strokeWeight: 2
@@ -529,17 +533,21 @@ function setupMapControls() {
     });
     
     resetViewBtn.addEventListener('click', () => {
-        map.setCenter({ lat: 40.7982, lng: -77.8599 });
-        map.setZoom(16);
+        const mapCenter = (typeof CONFIG !== 'undefined' && CONFIG.MAP_CENTER) ? CONFIG.MAP_CENTER : { lat: 40.7982, lng: -77.8599 };
+        const mapZoom = (typeof CONFIG !== 'undefined' && CONFIG.MAP_ZOOM) ? CONFIG.MAP_ZOOM : 16;
+        
+        map.setCenter(mapCenter);
+        map.setZoom(mapZoom);
         document.getElementById('buildingInfoPanel').classList.remove('show');
         currentBuilding = null;
         
         // Reset marker colors
+        const normalColor = (typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea';
         markers.forEach(marker => {
             marker.setIcon({
                 path: google.maps.SymbolPath.CIRCLE,
                 scale: 8,
-                fillColor: '#667eea',
+                fillColor: normalColor,
                 fillOpacity: 1,
                 strokeColor: '#ffffff',
                 strokeWeight: 2
@@ -557,11 +565,12 @@ function setupBuildingPanel() {
         currentBuilding = null;
         
         // Reset marker colors
+        const normalColor = (typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea';
         markers.forEach(marker => {
             marker.setIcon({
                 path: google.maps.SymbolPath.CIRCLE,
                 scale: 8,
-                fillColor: '#667eea',
+                fillColor: normalColor,
                 fillOpacity: 1,
                 strokeColor: '#ffffff',
                 strokeWeight: 2
