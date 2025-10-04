@@ -1,5 +1,5 @@
 # API Keys and sensitive configuration
-config.js
+# config.js - Commented out for Vercel deployment
 
 # Environment variables
 .env
