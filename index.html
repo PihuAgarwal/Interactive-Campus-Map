@@ -29,6 +29,19 @@
         <header class="header">
             <h1>Penn State University Park</h1>
             <p>Interactive Campus Map - Hover over buildings for details</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search for a location (e.g., HUB, Library, IM Building, Rec Hall, Bus Stop)"
+                    autocomplete="off"
+                >
+                <span class="search-icon">🔍</span>
+            </div>
+            
             <div class="map-controls">
                 <button id="toggleSatellite" class="control-btn">Satellite View</button>
                 <button id="resetView" class="control-btn">Reset View</button>

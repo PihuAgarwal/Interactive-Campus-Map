@@ -53,6 +53,80 @@ body {
     border-radius: 0;
 }
 
+/* Search Bar */
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 3rem 0.75rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.search-input::placeholder {
+    color: #666;
+}
+
+.search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    pointer-events: none;
+    color: #667eea;
+}
+
+/* Google Places Autocomplete dropdown styling */
+.pac-container {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: none;
+    margin-top: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pac-item {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-top: 1px solid #eee;
+}
+
+.pac-item:first-child {
+    border-top: none;
+}
+
+.pac-item:hover {
+    background-color: #f5f5f5;
+}
+
+.pac-item-selected {
+    background-color: #e8f0fe;
+}
+
+.pac-icon {
+    margin-right: 0.5rem;
+}
+
 /* Map controls */
 .map-controls {
     margin-top: 1rem;
@@ -401,6 +475,22 @@ body {
         font-size: 1rem;
     }
     
+    .search-container {
+        max-width: 100%;
+        width: 95%;
+        margin: 0.75rem auto;
+    }
+    
+    .search-input {
+        padding: 0.65rem 2.5rem 0.65rem 0.9rem;
+        font-size: 0.9rem;
+    }
+    
+    .search-icon {
+        right: 0.8rem;
+        font-size: 1rem;
+    }
+    
     .map-controls {
         gap: 0.5rem;
     }
@@ -454,6 +544,15 @@ body {
     
     .header h1 {
         font-size: 1.8rem;
+    }
+    
+    .search-input {
+        padding: 0.6rem 2.2rem 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .search-input::placeholder {
+        font-size: 0.8rem;
     }
     
     .map-container {

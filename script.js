@@ -1,4 +1,4 @@
-// Penn State University Park Building Data
+// Penn State University Park Building Data - Focused on Five Key Areas
 const pennStateBuildings = {
     'Pattee Library': {
         coordinates: { lat: 40.7967, lng: -77.8619 },
@@ -25,10 +25,10 @@ const pennStateBuildings = {
         },
         rooms: ['Study Rooms', 'Computer Labs', 'Quiet Study Areas', 'Group Study Spaces', 'Special Collections']
     },
-    'HUB-Robeson Center': {
+    'The HUB': {
         coordinates: { lat: 40.7964, lng: -77.8608 },
         image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-        description: 'Student union building with dining, meeting spaces, and student services.',
+        description: 'HUB-Robeson Center: Student union building with dining, meeting spaces, and student services.',
         hours: 'Monday-Friday: 6:00 AM - 12:00 AM, Saturday-Sunday: 8:00 AM - 12:00 AM',
         contact: 'Phone: (814) 865-9000',
         accessibility: {
@@ -50,10 +50,60 @@ const pennStateBuildings = {
         },
         rooms: ['Meeting Rooms', 'Event Spaces', 'Student Organization Offices', 'Computer Lab', 'Game Room']
     },
+    'IM Building': {
+        coordinates: { lat: 40.7967, lng: -77.8605 },
+        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+        description: 'Intramural Building with fitness facilities, courts, and recreational activities.',
+        hours: 'Monday-Friday: 6:00 AM - 11:00 PM, Saturday-Sunday: 8:00 AM - 10:00 PM',
+        contact: 'Phone: (814) 865-4466',
+        accessibility: {
+            wheelchair: true,
+            bathrooms: true,
+            elevator: true,
+            accessibleEntrance: true
+        },
+        food: {
+            available: true,
+            options: ['Smoothie Bar', 'Protein Shakes', 'Energy Bars', 'Vending Machines'],
+            dietaryRestrictions: {
+                vegetarian: true,
+                vegan: true,
+                glutenFree: true,
+                halal: false,
+                kosher: false
+            }
+        },
+        rooms: ['Basketball Courts', 'Weight Room', 'Cardio Area', 'Racquetball Courts', 'Fitness Classes', 'Locker Rooms']
+    },
+    'White Building': {
+        coordinates: { lat: 40.7971, lng: -77.8670 },
+        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+        description: 'White Building recreation facility with gym equipment and fitness spaces.',
+        hours: 'Monday-Friday: 6:00 AM - 11:00 PM, Saturday-Sunday: 8:00 AM - 10:00 PM',
+        contact: 'Phone: (814) 865-4466',
+        accessibility: {
+            wheelchair: true,
+            bathrooms: true,
+            elevator: true,
+            accessibleEntrance: true
+        },
+        food: {
+            available: true,
+            options: ['Smoothie Bar', 'Protein Shakes', 'Energy Bars'],
+            dietaryRestrictions: {
+                vegetarian: true,
+                vegan: true,
+                glutenFree: true,
+                halal: false,
+                kosher: false
+            }
+        },
+        rooms: ['Fitness Equipment', 'Cardio Machines', 'Weight Training Area', 'Locker Rooms', 'Group Exercise Rooms']
+    },
     'Rec Hall': {
         coordinates: { lat: 40.7978, lng: -77.8594 },
         image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-        description: 'Recreation center with fitness equipment, courts, and recreational activities.',
+        description: 'Recreation Hall with fitness equipment, courts, and recreational activities.',
         hours: 'Monday-Friday: 5:30 AM - 11:00 PM, Saturday-Sunday: 7:00 AM - 10:00 PM',
         contact: 'Phone: (814) 865-4466',
         accessibility: {
@@ -75,41 +125,17 @@ const pennStateBuildings = {
         },
         rooms: ['Basketball Courts', 'Weight Room', 'Cardio Area', 'Swimming Pool', 'Racquetball Courts', 'Fitness Classes']
     },
-    'Pollock Dining Commons': {
-        coordinates: { lat: 40.7992, lng: -77.8578 },
-        image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-        description: 'All-you-can-eat dining hall with diverse menu options and dietary accommodations.',
-        hours: 'Breakfast: 7:00 AM - 10:00 AM, Lunch: 11:00 AM - 2:00 PM, Dinner: 5:00 PM - 8:00 PM',
-        contact: 'Phone: (814) 865-4444',
+    // Bus Stops on Campus
+    'HUB Bus Stop': {
+        coordinates: { lat: 40.7965, lng: -77.8609 },
+        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        description: 'Bus stop at the HUB-Robeson Center. Serves multiple campus bus routes.',
+        hours: '24/7',
+        contact: 'CATA: (814) 238-2282',
         accessibility: {
             wheelchair: true,
-            bathrooms: true,
-            elevator: true,
-            accessibleEntrance: true
-        },
-        food: {
-            available: true,
-            options: ['All-You-Can-Eat Buffet', 'Grill Station', 'Pizza', 'Salad Bar', 'Desserts'],
-            dietaryRestrictions: {
-                vegetarian: true,
-                vegan: true,
-                glutenFree: true,
-                halal: true,
-                kosher: true
-            }
-        },
-        rooms: ['Dining Hall', 'Private Dining Room', 'Kitchen', 'Storage Areas']
-    },
-    'West Halls': {
-        coordinates: { lat: 40.8001, lng: -77.8589 },
-        image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-        description: 'Residence hall complex with modern amenities and community spaces.',
-        hours: '24/7 Access with Student ID',
-        contact: 'Residence Life: (814) 865-7500',
-        accessibility: {
-            wheelchair: true,
-            bathrooms: true,
-            elevator: true,
+            bathrooms: false,
+            elevator: false,
             accessibleEntrance: true
         },
         food: {
@@ -117,18 +143,18 @@ const pennStateBuildings = {
             options: [],
             dietaryRestrictions: {}
         },
-        rooms: ['Single Rooms', 'Double Rooms', 'Common Areas', 'Laundry Rooms', 'Study Lounges', 'Kitchenettes']
+        rooms: ['Bus Shelter', 'Seating Area']
     },
-    'East Halls': {
-        coordinates: { lat: 40.7989, lng: -77.8571 },
-        image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-        description: 'Traditional residence hall complex with community-focused living.',
-        hours: '24/7 Access with Student ID',
-        contact: 'Residence Life: (814) 865-7500',
+    'Library Bus Stop': {
+        coordinates: { lat: 40.7968, lng: -77.8620 },
+        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        description: 'Bus stop near Pattee Library. Convenient access to library and surrounding buildings.',
+        hours: '24/7',
+        contact: 'CATA: (814) 238-2282',
         accessibility: {
             wheelchair: true,
-            bathrooms: true,
-            elevator: true,
+            bathrooms: false,
+            elevator: false,
             accessibleEntrance: true
         },
         food: {
@@ -136,43 +162,18 @@ const pennStateBuildings = {
             options: [],
             dietaryRestrictions: {}
         },
-        rooms: ['Single Rooms', 'Double Rooms', 'Common Areas', 'Laundry Rooms', 'Study Lounges']
+        rooms: ['Bus Shelter', 'Seating Area']
     },
-    'Smeal College of Business': {
-        coordinates: { lat: 40.7956, lng: -77.8623 },
-        image: 'https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-        description: 'Business school building with classrooms, offices, and study spaces.',
-        hours: 'Monday-Friday: 7:00 AM - 10:00 PM, Saturday-Sunday: 8:00 AM - 6:00 PM',
-        contact: 'Phone: (814) 865-3434',
+    'Rec Hall Bus Stop': {
+        coordinates: { lat: 40.7979, lng: -77.8595 },
+        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        description: 'Bus stop at Recreation Hall. Access to gym facilities and nearby residence halls.',
+        hours: '24/7',
+        contact: 'CATA: (814) 238-2282',
         accessibility: {
             wheelchair: true,
-            bathrooms: true,
-            elevator: true,
-            accessibleEntrance: true
-        },
-        food: {
-            available: true,
-            options: ['Coffee Shop', 'Vending Machines'],
-            dietaryRestrictions: {
-                vegetarian: true,
-                vegan: true,
-                glutenFree: true,
-                halal: false,
-                kosher: false
-            }
-        },
-        rooms: ['Classrooms', 'Faculty Offices', 'Study Rooms', 'Computer Lab', 'Auditorium', 'Conference Rooms']
-    },
-    'Old Main': {
-        coordinates: { lat: 40.7961, lng: -77.8612 },
-        image: 'https://images.unsplash.com/photo-1529408632839-a54952c491e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-        description: 'Historic administrative building and symbol of Penn State University.',
-        hours: 'Monday-Friday: 8:00 AM - 5:00 PM',
-        contact: 'Phone: (814) 865-4700',
-        accessibility: {
-            wheelchair: true,
-            bathrooms: true,
-            elevator: true,
+            bathrooms: false,
+            elevator: false,
             accessibleEntrance: true
         },
         food: {
@@ -180,7 +181,45 @@ const pennStateBuildings = {
             options: [],
             dietaryRestrictions: {}
         },
-        rooms: ['Administrative Offices', 'President\'s Office', 'Board Room', 'Historical Displays']
+        rooms: ['Bus Shelter', 'Seating Area']
+    },
+    'IM Building Bus Stop': {
+        coordinates: { lat: 40.7968, lng: -77.8606 },
+        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        description: 'Bus stop near IM Building. Convenient access to intramural facilities.',
+        hours: '24/7',
+        contact: 'CATA: (814) 238-2282',
+        accessibility: {
+            wheelchair: true,
+            bathrooms: false,
+            elevator: false,
+            accessibleEntrance: true
+        },
+        food: {
+            available: false,
+            options: [],
+            dietaryRestrictions: {}
+        },
+        rooms: ['Bus Shelter', 'Seating Area']
+    },
+    'White Building Bus Stop': {
+        coordinates: { lat: 40.7972, lng: -77.8671 },
+        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        description: 'Bus stop near White Building. Access to recreation facilities.',
+        hours: '24/7',
+        contact: 'CATA: (814) 238-2282',
+        accessibility: {
+            wheelchair: true,
+            bathrooms: false,
+            elevator: false,
+            accessibleEntrance: true
+        },
+        food: {
+            available: false,
+            options: [],
+            dietaryRestrictions: {}
+        },
+        rooms: ['Bus Shelter', 'Seating Area']
     }
 };
 
@@ -218,6 +257,7 @@ function initMap() {
     // Setup event listeners
     setupMapControls();
     setupBuildingPanel();
+    setupSearchBar();
 }
 
 // Add markers for all buildings
@@ -225,14 +265,19 @@ function addBuildingMarkers() {
     Object.keys(pennStateBuildings).forEach(buildingName => {
         const building = pennStateBuildings[buildingName];
         
+        // Different marker colors for bus stops vs buildings
+        const isBusStop = buildingName.includes('Bus Stop');
+        const markerColor = isBusStop ? '#28a745' : ((typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea');
+        const markerScale = isBusStop ? 6 : 8;
+        
         const marker = new google.maps.Marker({
             position: building.coordinates,
             map: map,
             title: buildingName,
             icon: {
                 path: google.maps.SymbolPath.CIRCLE,
-                scale: 8,
-                fillColor: (typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea',
+                scale: markerScale,
+                fillColor: markerColor,
                 fillOpacity: 1,
                 strokeColor: '#ffffff',
                 strokeWeight: 2
@@ -508,10 +553,15 @@ function highlightMarker(selectedMarker) {
     const selectedColor = (typeof CONFIG !== 'undefined' && CONFIG.MARKER_SELECTED_COLOR) ? CONFIG.MARKER_SELECTED_COLOR : '#ff6b6b';
     
     markers.forEach(marker => {
+        const buildingName = marker.getTitle();
+        const isBusStop = buildingName && buildingName.includes('Bus Stop');
+        const defaultColor = isBusStop ? '#28a745' : normalColor;
+        const defaultScale = isBusStop ? 6 : 8;
+        
         marker.setIcon({
             path: google.maps.SymbolPath.CIRCLE,
-            scale: 8,
-            fillColor: marker === selectedMarker ? selectedColor : normalColor,
+            scale: marker === selectedMarker ? (isBusStop ? 8 : 10) : defaultScale,
+            fillColor: marker === selectedMarker ? selectedColor : defaultColor,
             fillOpacity: 1,
             strokeColor: '#ffffff',
             strokeWeight: 2
@@ -544,10 +594,15 @@ function setupMapControls() {
         // Reset marker colors
         const normalColor = (typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea';
         markers.forEach(marker => {
+            const buildingName = marker.getTitle();
+            const isBusStop = buildingName && buildingName.includes('Bus Stop');
+            const markerColor = isBusStop ? '#28a745' : normalColor;
+            const markerScale = isBusStop ? 6 : 8;
+            
             marker.setIcon({
                 path: google.maps.SymbolPath.CIRCLE,
-                scale: 8,
-                fillColor: normalColor,
+                scale: markerScale,
+                fillColor: markerColor,
                 fillOpacity: 1,
                 strokeColor: '#ffffff',
                 strokeWeight: 2
@@ -567,10 +622,15 @@ function setupBuildingPanel() {
         // Reset marker colors
         const normalColor = (typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea';
         markers.forEach(marker => {
+            const buildingName = marker.getTitle();
+            const isBusStop = buildingName && buildingName.includes('Bus Stop');
+            const markerColor = isBusStop ? '#28a745' : normalColor;
+            const markerScale = isBusStop ? 6 : 8;
+            
             marker.setIcon({
                 path: google.maps.SymbolPath.CIRCLE,
-                scale: 8,
-                fillColor: normalColor,
+                scale: markerScale,
+                fillColor: markerColor,
                 fillOpacity: 1,
                 strokeColor: '#ffffff',
                 strokeWeight: 2
@@ -611,6 +671,127 @@ function addBuilding(buildingName, buildingData) {
     });
     
     markers.push(marker);
+}
+
+// Setup search bar with Places Autocomplete
+function setupSearchBar() {
+    const searchInput = document.getElementById('searchInput');
+    if (!searchInput) return;
+    
+    // Create autocomplete instance
+    const autocomplete = new google.maps.places.Autocomplete(searchInput, {
+        fields: ['place_id', 'geometry', 'name', 'formatted_address'],
+        types: ['establishment', 'point_of_interest'],
+        componentRestrictions: { country: 'us' }
+    });
+    
+    // Set bounds to focus on Penn State campus area
+    const campusBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(40.7930, -77.8690), // Southwest corner
+        new google.maps.LatLng(40.8030, -77.8570)  // Northeast corner
+    );
+    autocomplete.setBounds(campusBounds);
+    
+    // Bias results towards campus
+    autocomplete.setComponentRestrictions({ country: 'us' });
+    
+    // Handle place selection
+    autocomplete.addListener('place_changed', () => {
+        const place = autocomplete.getPlace();
+        
+        if (!place.geometry || !place.geometry.location) {
+            // If place not found via Places API, try to match with our building data
+            const searchTerm = searchInput.value.toLowerCase();
+            const matchedBuilding = findBuildingByName(searchTerm);
+            
+            if (matchedBuilding) {
+                const building = pennStateBuildings[matchedBuilding];
+                map.setCenter(building.coordinates);
+                map.setZoom(18);
+                showBuildingInfo(matchedBuilding);
+                
+                // Highlight the marker
+                const marker = markers.find(m => m.getTitle() === matchedBuilding);
+                if (marker) {
+                    highlightMarker(marker);
+                }
+            } else {
+                alert('Location not found. Please try searching for: Pattee Library, The HUB, IM Building, White Building, Rec Hall, or bus stops.');
+            }
+            return;
+        }
+        
+        // Center map on selected place
+        map.setCenter(place.geometry.location);
+        map.setZoom(17);
+        
+        // Check if this matches one of our buildings
+        const buildingMatch = findBuildingByCoordinates(
+            place.geometry.location.lat(),
+            place.geometry.location.lng()
+        );
+        
+        if (buildingMatch) {
+            showBuildingInfo(buildingMatch);
+            const marker = markers.find(m => m.getTitle() === buildingMatch);
+            if (marker) {
+                highlightMarker(marker);
+            }
+        }
+    });
+}
+
+// Helper function to find building by name (fuzzy search)
+function findBuildingByName(searchTerm) {
+    const normalizedSearch = searchTerm.toLowerCase();
+    
+    for (const buildingName of Object.keys(pennStateBuildings)) {
+        const normalizedName = buildingName.toLowerCase();
+        
+        // Exact match
+        if (normalizedName === normalizedSearch) {
+            return buildingName;
+        }
+        
+        // Partial match
+        if (normalizedName.includes(normalizedSearch) || normalizedSearch.includes(normalizedName)) {
+            return buildingName;
+        }
+        
+        // Check for common aliases
+        const aliases = {
+            'hub': 'The HUB',
+            'library': 'Pattee Library',
+            'pattee': 'Pattee Library',
+            'rec hall': 'Rec Hall',
+            'recreation hall': 'Rec Hall',
+            'im building': 'IM Building',
+            'intramural': 'IM Building',
+            'white building': 'White Building'
+        };
+        
+        if (aliases[normalizedSearch]) {
+            return aliases[normalizedSearch];
+        }
+    }
+    
+    return null;
+}
+
+// Helper function to find building by coordinates (within 50 meters)
+function findBuildingByCoordinates(lat, lng) {
+    const threshold = 0.0005; // Approximately 50 meters
+    
+    for (const [buildingName, building] of Object.entries(pennStateBuildings)) {
+        const latDiff = Math.abs(building.coordinates.lat - lat);
+        const lngDiff = Math.abs(building.coordinates.lng - lng);
+        
+        if (latDiff < threshold && lngDiff < threshold) {
+            return buildingName;
+        }
+    }
+    
+    return null;
 }
 
 // Export for external use
