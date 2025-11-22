@@ -1,7 +1,7 @@
 // Penn State University Park Building Data - Focused on Five Key Areas
 const pennStateBuildings = {
     'Pattee Library': {
-        coordinates: { lat: 40.7967, lng: -77.8619 },
+        coordinates: { lat: 40.79855134336913, lng: -77.86551831669053 },
         image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
         description: 'Main library with extensive collections, study spaces, and research resources.',
         hours: 'Monday-Friday: 7:00 AM - 11:00 PM, Saturday-Sunday: 9:00 AM - 9:00 PM',
@@ -26,7 +26,7 @@ const pennStateBuildings = {
         rooms: ['Study Rooms', 'Computer Labs', 'Quiet Study Areas', 'Group Study Spaces', 'Special Collections']
     },
     'The HUB': {
-        coordinates: { lat: 40.7964, lng: -77.8608 },
+        coordinates: { lat: 40.79858147936319, lng: -77.86134005095026 },
         image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
         description: 'HUB-Robeson Center: Student union building with dining, meeting spaces, and student services.',
         hours: 'Monday-Friday: 6:00 AM - 12:00 AM, Saturday-Sunday: 8:00 AM - 12:00 AM',
@@ -51,7 +51,7 @@ const pennStateBuildings = {
         rooms: ['Meeting Rooms', 'Event Spaces', 'Student Organization Offices', 'Computer Lab', 'Game Room']
     },
     'IM Building': {
-        coordinates: { lat: 40.7967, lng: -77.8605 },
+        coordinates: { lat: 40.80762280614888, lng: -77.85886221809656 },
         image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
         description: 'Intramural Building with fitness facilities, courts, and recreational activities.',
         hours: 'Monday-Friday: 6:00 AM - 11:00 PM, Saturday-Sunday: 8:00 AM - 10:00 PM',
@@ -76,7 +76,7 @@ const pennStateBuildings = {
         rooms: ['Basketball Courts', 'Weight Room', 'Cardio Area', 'Racquetball Courts', 'Fitness Classes', 'Locker Rooms']
     },
     'White Building': {
-        coordinates: { lat: 40.7971, lng: -77.8670 },
+        coordinates: { lat: 40.79877619047101, lng: -77.85872260121681 },
         image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
         description: 'White Building recreation facility with gym equipment and fitness spaces.',
         hours: 'Monday-Friday: 6:00 AM - 11:00 PM, Saturday-Sunday: 8:00 AM - 10:00 PM',
@@ -101,7 +101,7 @@ const pennStateBuildings = {
         rooms: ['Fitness Equipment', 'Cardio Machines', 'Weight Training Area', 'Locker Rooms', 'Group Exercise Rooms']
     },
     'Rec Hall': {
-        coordinates: { lat: 40.7978, lng: -77.8594 },
+        coordinates: { lat: 40.79611887526229, lng: -77.86932420491961 },
         image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
         description: 'Recreation Hall with fitness equipment, courts, and recreational activities.',
         hours: 'Monday-Friday: 5:30 AM - 11:00 PM, Saturday-Sunday: 7:00 AM - 10:00 PM',
@@ -126,88 +126,73 @@ const pennStateBuildings = {
         rooms: ['Basketball Courts', 'Weight Room', 'Cardio Area', 'Swimming Pool', 'Racquetball Courts', 'Fitness Classes']
     },
     // Bus Stops on Campus
-    'HUB Bus Stop': {
-        coordinates: { lat: 40.7965, lng: -77.8609 },
-        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        description: 'Bus stop at the HUB-Robeson Center. Serves multiple campus bus routes.',
-        hours: '24/7',
-        contact: 'CATA: (814) 238-2282',
-        accessibility: {
-            wheelchair: true,
-            bathrooms: false,
-            elevator: false,
-            accessibleEntrance: true
-        },
-        food: {
-            available: false,
-            options: [],
-            dietaryRestrictions: {}
-        },
-        rooms: ['Bus Shelter', 'Seating Area']
-    },
-    'Library Bus Stop': {
-        coordinates: { lat: 40.7968, lng: -77.8620 },
-        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        description: 'Bus stop near Pattee Library. Convenient access to library and surrounding buildings.',
-        hours: '24/7',
-        contact: 'CATA: (814) 238-2282',
-        accessibility: {
-            wheelchair: true,
-            bathrooms: false,
-            elevator: false,
-            accessibleEntrance: true
-        },
-        food: {
-            available: false,
-            options: [],
-            dietaryRestrictions: {}
-        },
-        rooms: ['Bus Shelter', 'Seating Area']
-    },
-    'Rec Hall Bus Stop': {
-        coordinates: { lat: 40.7979, lng: -77.8595 },
-        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        description: 'Bus stop at Recreation Hall. Access to gym facilities and nearby residence halls.',
-        hours: '24/7',
-        contact: 'CATA: (814) 238-2282',
-        accessibility: {
-            wheelchair: true,
-            bathrooms: false,
-            elevator: false,
-            accessibleEntrance: true
-        },
-        food: {
-            available: false,
-            options: [],
-            dietaryRestrictions: {}
-        },
-        rooms: ['Bus Shelter', 'Seating Area']
-    },
-    'IM Building Bus Stop': {
-        coordinates: { lat: 40.7968, lng: -77.8606 },
-        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-        description: 'Bus stop near IM Building. Convenient access to intramural facilities.',
-        hours: '24/7',
-        contact: 'CATA: (814) 238-2282',
-        accessibility: {
-            wheelchair: true,
-            bathrooms: false,
-            elevator: false,
-            accessibleEntrance: true
-        },
-        food: {
-            available: false,
-            options: [],
-            dietaryRestrictions: {}
-        },
-        rooms: ['Bus Shelter', 'Seating Area']
-    },
     'White Building Bus Stop': {
-        coordinates: { lat: 40.7972, lng: -77.8671 },
+        coordinates: { lat: 40.7991717981555, lng: -77.85903392026297 },
         image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
         description: 'Bus stop near White Building. Access to recreation facilities.',
         hours: '24/7',
         contact: 'CATA: (814) 238-2282',
+        routes: ['Blue Loop', 'Red Link'],
+        accessibility: {
+            wheelchair: true,
+            bathrooms: false,
+            elevator: false,
+            accessibleEntrance: true
+        },
+        food: {
+            available: false,
+            options: [],
+            dietaryRestrictions: {}
+        },
+        rooms: ['Bus Shelter', 'Seating Area']
+    },
+    'Pattee Transit Center Westbound': {
+        coordinates: { lat: 40.79756017366081, lng: -77.8675596620582 },
+        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        description: 'Pattee Transit Center Westbound bus stop. Major transit hub near Pattee Library.',
+        hours: '24/7',
+        contact: 'CATA: (814) 238-2282',
+        routes: ['Blue Loop', 'White Loop', 'Red Link', 'Green Link'],
+        accessibility: {
+            wheelchair: true,
+            bathrooms: false,
+            elevator: false,
+            accessibleEntrance: true
+        },
+        food: {
+            available: false,
+            options: [],
+            dietaryRestrictions: {}
+        },
+        rooms: ['Bus Shelter', 'Seating Area', 'Transit Center']
+    },
+    'E College Ave at Atherton Hall': {
+        coordinates: { lat: 40.79730805600079, lng: -77.85802630897581 },
+        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        description: 'Bus stop at E College Ave near Atherton Hall. Convenient access to residence halls and campus.',
+        hours: '24/7',
+        contact: 'CATA: (814) 238-2282',
+        routes: ['Blue Loop', 'White Loop'],
+        accessibility: {
+            wheelchair: true,
+            bathrooms: false,
+            elevator: false,
+            accessibleEntrance: true
+        },
+        food: {
+            available: false,
+            options: [],
+            dietaryRestrictions: {}
+        },
+        rooms: ['Bus Shelter', 'Seating Area']
+    },
+    'Curtain Road at Shields Building': {
+        coordinates: { lat: 40.807159513982846, lng: -77.8587033652453 },
+        image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        description: 'Bus stop at Curtain Road near Shields Building. Access to IM Building and north campus.',
+        hours: '24/7',
+        contact: 'CATA: (814) 238-2282',
+        routes: ['Blue Loop', 'Red Link', 'Green Link'],
         accessibility: {
             wheelchair: true,
             bathrooms: false,
@@ -266,7 +251,7 @@ function addBuildingMarkers() {
         const building = pennStateBuildings[buildingName];
         
         // Different marker colors for bus stops vs buildings
-        const isBusStop = buildingName.includes('Bus Stop');
+        const isBusStop = buildingName.includes('Bus Stop') || buildingName.includes('Transit Center') || buildingName.includes('at ');
         const markerColor = isBusStop ? '#28a745' : ((typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea');
         const markerScale = isBusStop ? 6 : 8;
         
@@ -337,6 +322,23 @@ function showBuildingInfo(buildingName) {
         </div>
     `;
     
+    // Add bus routes for bus stops
+    if (building.routes && building.routes.length > 0) {
+        detailsHTML += `
+            <div class="building-detail">
+                <h4>🚌 Bus Routes</h4>
+                <ul style="margin: 8px 0 0 0; padding-left: 20px;">
+                    ${building.routes.map(route => `<li style="color: #28a745; font-weight: 500;">${route}</li>`).join('')}
+                </ul>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                    <a href="https://transportation.psu.edu/catabus" target="_blank" style="color: #667eea; text-decoration: none;">
+                        View Live Bus Tracker →
+                    </a>
+                </p>
+            </div>
+        `;
+    }
+    
     // Add accessibility information
     if (building.accessibility) {
         let accessibilityHTML = '<div class="building-detail"><h4>♿ Accessibility</h4><ul style="margin: 8px 0 0 0; padding-left: 20px;">';
@@ -389,23 +391,6 @@ function showBuildingInfo(buildingName) {
             if (restrictions.kosher) {
                 foodHTML += '<li>✅ Kosher Options</li>';
             }
-            
-            // Also show what's NOT available
-            if (!restrictions.vegetarian) {
-                foodHTML += '<li>❌ No Vegetarian Options</li>';
-            }
-            if (!restrictions.vegan) {
-                foodHTML += '<li>❌ No Vegan Options</li>';
-            }
-            if (!restrictions.glutenFree) {
-                foodHTML += '<li>❌ No Gluten-Free Options</li>';
-            }
-            if (!restrictions.halal) {
-                foodHTML += '<li>❌ No Halal Options</li>';
-            }
-            if (!restrictions.kosher) {
-                foodHTML += '<li>❌ No Kosher Options</li>';
-            }
         }
         
         foodHTML += '</ul></div>';
@@ -456,6 +441,16 @@ function showBuildingTooltip(buildingName) {
                     <span style="color: #666;">${building.contact}</span>
                 </div>
     `;
+    
+    // Add bus routes for bus stops in tooltip
+    if (building.routes && building.routes.length > 0) {
+        tooltipContent += `
+            <div style="margin: 8px 0;">
+                <strong style="color: #28a745;">🚌 Bus Routes:</strong><br>
+                <span style="color: #666;">${building.routes.join(', ')}</span>
+            </div>
+        `;
+    }
     
     // Add accessibility information
     if (building.accessibility) {
@@ -554,7 +549,7 @@ function highlightMarker(selectedMarker) {
     
     markers.forEach(marker => {
         const buildingName = marker.getTitle();
-        const isBusStop = buildingName && buildingName.includes('Bus Stop');
+        const isBusStop = buildingName && (buildingName.includes('Bus Stop') || buildingName.includes('Transit Center') || buildingName.includes('at '));
         const defaultColor = isBusStop ? '#28a745' : normalColor;
         const defaultScale = isBusStop ? 6 : 8;
         
@@ -595,7 +590,7 @@ function setupMapControls() {
         const normalColor = (typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea';
         markers.forEach(marker => {
             const buildingName = marker.getTitle();
-            const isBusStop = buildingName && buildingName.includes('Bus Stop');
+            const isBusStop = buildingName && (buildingName.includes('Bus Stop') || buildingName.includes('Transit Center') || buildingName.includes('at '));
             const markerColor = isBusStop ? '#28a745' : normalColor;
             const markerScale = isBusStop ? 6 : 8;
             
@@ -623,7 +618,7 @@ function setupBuildingPanel() {
         const normalColor = (typeof CONFIG !== 'undefined' && CONFIG.MARKER_COLOR) ? CONFIG.MARKER_COLOR : '#667eea';
         markers.forEach(marker => {
             const buildingName = marker.getTitle();
-            const isBusStop = buildingName && buildingName.includes('Bus Stop');
+            const isBusStop = buildingName && (buildingName.includes('Bus Stop') || buildingName.includes('Transit Center') || buildingName.includes('at '));
             const markerColor = isBusStop ? '#28a745' : normalColor;
             const markerScale = isBusStop ? 6 : 8;
             
@@ -688,7 +683,7 @@ function setupSearchBar() {
     // Set bounds to focus on Penn State campus area
     const campusBounds = new google.maps.LatLngBounds(
         new google.maps.LatLng(40.7930, -77.8690), // Southwest corner
-        new google.maps.LatLng(40.8030, -77.8570)  // Northeast corner
+        new google.maps.LatLng(40.8100, -77.8570)  // Northeast corner (extended for IM Building)
     );
     autocomplete.setBounds(campusBounds);
     
@@ -767,7 +762,11 @@ function findBuildingByName(searchTerm) {
             'recreation hall': 'Rec Hall',
             'im building': 'IM Building',
             'intramural': 'IM Building',
-            'white building': 'White Building'
+            'white building': 'White Building',
+            'transit center': 'Pattee Transit Center Westbound',
+            'atherton': 'E College Ave at Atherton Hall',
+            'curtain road': 'Curtain Road at Shields Building',
+            'shields': 'Curtain Road at Shields Building'
         };
         
         if (aliases[normalizedSearch]) {
